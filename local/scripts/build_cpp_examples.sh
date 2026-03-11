@@ -1,8 +1,8 @@
 #!/bin/bash
-"""
-Build script for all C++ examples in the Pinocchio examples collection.
-Supports incremental builds and parallel compilation.
-"""
+#
+# Build script for all C++ examples in the Pinocchio examples collection.
+# Supports incremental builds and parallel compilation.
+#
 
 set -euo pipefail
 

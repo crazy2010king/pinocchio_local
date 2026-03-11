@@ -1,8 +1,8 @@
 #!/bin/bash
-"""
-Main script to run Pinocchio examples.
-Supports running all examples, by category, or individual examples.
-"""
+#
+# Main script to run Pinocchio examples.
+# Supports running all examples, by category, or individual examples.
+#
 
 set -eo pipefail
 
