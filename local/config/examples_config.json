@@ -1,0 +1,123 @@
+{
+  "environment": {
+    "python_path": "/usr/bin/python3",
+    "cpp_compiler": "/usr/bin/g++",
+    "build_dir": "../examples/cpp/build"
+  },
+  "examples": [
+    {
+      "name": "overview-simple.py",
+      "category": "kinematics",
+      "language": "python",
+      "path": "python/kinematics/overview-simple.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "overview-urdf.py",
+      "category": "kinematics",
+      "language": "python",
+      "path": "python/kinematics/overview-urdf.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy", "urdf_parser"]
+    },
+    {
+      "name": "overview-SE3.py",
+      "category": "kinematics",
+      "language": "python",
+      "path": "python/kinematics/overview-SE3.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "overview-lie.py",
+      "category": "kinematics",
+      "language": "python",
+      "path": "python/kinematics/overview-lie.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "kinematics-derivatives.py",
+      "category": "kinematics",
+      "language": "python",
+      "path": "python/kinematics/kinematics-derivatives.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "inverse-dynamics.py",
+      "category": "dynamics",
+      "language": "python",
+      "path": "python/dynamics/inverse-dynamics.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "forward-dynamics-derivatives.py",
+      "category": "dynamics",
+      "language": "python",
+      "path": "python/dynamics/forward-dynamics-derivatives.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy"]
+    },
+    {
+      "name": "collisions.py",
+      "category": "collision",
+      "language": "python",
+      "path": "python/collision/collisions.py",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy", "hpp-fcl"]
+    },
+    {
+      "name": "simulation-pendulum.py",
+      "category": "simulation",
+      "language": "python",
+      "path": "python/simulation/simulation-pendulum.py",
+      "timeout": 60,
+      "enabled": true,
+      "dependencies": ["pinocchio", "numpy", "matplotlib"]
+    },
+    {
+      "name": "overview-simple.cpp",
+      "category": "kinematics",
+      "language": "cpp",
+      "path": "cpp/kinematics/overview-simple.cpp",
+      "build_cmd": "g++ overview-simple.cpp -o overview-simple $(pkg-config --cflags --libs pinocchio eigen3)",
+      "run_cmd": "./overview-simple",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "eigen3"]
+    },
+    {
+      "name": "overview-urdf.cpp",
+      "category": "kinematics",
+      "language": "cpp",
+      "path": "cpp/kinematics/overview-urdf.cpp",
+      "build_cmd": "g++ overview-urdf.cpp -o overview-urdf $(pkg-config --cflags --libs pinocchio eigen3 urdfdom)",
+      "run_cmd": "./overview-urdf",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "eigen3", "urdfdom"]
+    },
+    {
+      "name": "collisions.cpp",
+      "category": "collision",
+      "language": "cpp",
+      "path": "cpp/collision/collisions.cpp",
+      "build_cmd": "g++ collisions.cpp -o collisions $(pkg-config --cflags --libs pinocchio eigen3 hpp-fcl)",
+      "run_cmd": "./collisions",
+      "timeout": 30,
+      "enabled": true,
+      "dependencies": ["pinocchio", "eigen3", "hpp-fcl"]
+    }
+  ]
+}
